@@ -1,3 +1,4 @@
+"
 "    .-.                                                   \ /
 "   ( (                                |                  - * -
 "    '-`                              -+-                  / \
@@ -7,6 +8,7 @@
 "      ___ /_________\   //|\\   /___________\  /_________\
 "     /___\ |[] _ []|    //|\\    | A /^\ A |    |[] _ []|
 " ....|"#"|.|  |*|  |...///|\\\...|   |"|   |....|  |*|  |.........
+"
 "
 " Nordan - Arctic nights color scheme
 " Author: Dan Loudon
@@ -26,7 +28,6 @@ let g:colors_name='nordan'
 if !exists('g:nordan_italics')
   let g:nordan_italics = 0
 endif
-
 
 " ===  Polar Night  =========
 let s:nord0 = '#2E3440'
@@ -52,7 +53,6 @@ let s:nord13 = '#EBCB8B'
 let s:nord14 = '#A3BE8C'
 let s:nord15 = '#B48EAD'
 
-
 function! s:HL(group, fg, bg, attr)
   let l:attr = a:attr
   if g:nordan_italics == 0 && l:attr ==? 'italic'
@@ -72,46 +72,46 @@ function! s:HL(group, fg, bg, attr)
   endif
 endfun
 
-
 " ===  Editor  =========
-call s:HL('ColumnColor',              s:nord13,   '',   '')
-call s:HL('Cursor',                   s:nord13,   '',   '')
-call s:HL('CursorColumn',             s:nord13,   '',   '')
-call s:HL('CursorLine',               s:nord13,   '',   '')
-call s:HL('Directory',                s:nord13,   '',   '')
-call s:HL('DiffAdd',                  s:nord13,   '',   '')
-call s:HL('DiffChange',               s:nord13,   '',   '')
-call s:HL('DiffDelete',               s:nord13,   '',   '')
-call s:HL('DiffText',                 s:nord13,   '',   '')
-call s:HL('ErrorMsg',                 s:nord13,   '',   '')
-call s:HL('VertSplit',                s:nord13,   '',   '')
-call s:HL('Folded',                   s:nord13,   '',   '')
-call s:HL('FoldColumn',               s:nord13,   '',   '')
-call s:HL('SignColumn',               s:nord13,   '',   '')
-call s:HL('LineNr',                   s:nord13,   '',   '')
-call s:HL('CursorLineNr',             s:nord13,   '',   '')
-call s:HL('MatchParen',               s:nord13,   '',   '')
-call s:HL('ModeMsg',                  s:nord13,   '',   '')
-call s:HL('MoreMsg',                  s:nord13,   '',   '')
-call s:HL('NonText',                  s:nord13,   '',   '')
-call s:HL('Normal',                   s:nord13,   '',   '')
-call s:HL('Pmenu',                    s:nord13,   '',   '')
-call s:HL('PmenulSel',                s:nord13,   '',   '')
-call s:HL('PmenuSbar',                s:nord13,   '',   '')
-call s:HL('PmenuThumb',               s:nord13,   '',   '')
-call s:HL('Question',                 s:nord13,   '',   '')
-call s:HL('Search',                   s:nord13,   '',   '')
-call s:HL('SpecialKey',               s:nord13,   '',   '')
-call s:HL('SpellCap',                 s:nord13,   '',   '')
-call s:HL('StatusLine',               s:nord13,   '',   '')
-call s:HL('StatusLineNC',             s:nord13,   '',   '')
-call s:HL('TabLine',                  s:nord13,   '',   '')
-call s:HL('TabLineFill',              s:nord13,   '',   '')
-call s:HL('TabLineSel',               s:nord13,   '',   '')
-call s:HL('Title',                    s:nord13,   '',   '')
-call s:HL('Visual',                   s:nord13,   '',   '')
-call s:HL('WarningMsg',               s:nord13,   '',   '')
-call s:HL('WildMenu',                 s:nord13,   '',   '')
+call s:HL('ColumnColor',              '',         s:nord6,   '')
+call s:HL('Cursor',                   s:nord3,    s:nord5,   '')
+call s:HL('CursorColumn',             '',         s:nord4,   '')
+call s:HL('CursorLine',               '',         s:nord4,   'none')
+call s:HL('Directory',                s:nord9,    '',        '')
+call s:HL('DiffAdd',                  s:nord5,    s:nord14,  'none')
+call s:HL('DiffChange',               s:nord5,    s:nord13,  'none')
+call s:HL('DiffDelete',               s:nord5,    s:nord11,  'none')
+call s:HL('DiffText',                 s:nord5,    s:nord10,  'none')
+call s:HL('ErrorMsg',                 s:nord11    s:nord4,   'bold')
+call s:HL('VertSplit',                s:nord3,    s:nord2,   'none')
+call s:HL('Folded',                   s:nord4,    s:nord2,   '')
+call s:HL('FoldColumn',               s:nord8,    s:nord2,   '')
+call s:HL('SignColumn',               s:nord4,    s:nord2,   '')
+call s:HL('LineNr',                   s:nord4,    '',        '')
+call s:HL('CursorLineNr',             s:nord4,    s:nord3,   'none')
+call s:HL('MatchParen',               s:nord3,    s:nord7,   'bold')
+call s:HL('ModeMsg',                  s:nord10,   '',        '')
+call s:HL('MoreMsg',                  s:nord10,   '',        '')
+call s:HL('NonText',                  s:nord5,    '',        '')
+call s:HL('Normal',                   s:nord4,    s:nord2,   'none')
+call s:HL('Pmenu',                    s:nord3,    s:nord4,   '')
+call s:HL('PmenulSel',                s:nord3,    s:nord9,   '')
+call s:HL('PmenuSbar',                s:nord4,    s:nord1,   '')
+call s:HL('PmenuThumb',               s:nord2,    s:nord3,   '')
+call s:HL('Question',                 s:nord7,    '',        '')
+call s:HL('Search',                   s:nord2,    s:nord13,  '')
+call s:HL('SpecialKey',               s:nord3,    '',        '')
+call s:HL('SpellCap',                 s:nord10,   '',        'undercurl')
+call s:HL('SpellBad',                 s:nord11,   '',        'undercurl')
+call s:HL('StatusLine',               s:nord5,    s:nord3,   'none')
+call s:HL('StatusLineNC',             s:nord2,    s:nord4,   '')
+call s:HL('TabLine',                  s:nord2,    s:nord3,   'none')
+call s:HL('TabLineFill',              s:nord3,    s:nord4,   'none')
+call s:HL('TabLineSel',               s:nord4,    s:nord3,   '')
+call s:HL('Title',                    s:nord13,   '',        'none')
+call s:HL('Visual',                   s:nord4,    s:nord9,   '')
+call s:HL('WarningMsg',               s:nord11,   '',        '')
+call s:HL('WildMenu',                 s:nord2,    s:nord10,  '')
 
 " ===  Syntax  =========
 call s:HL('Character',                s:nord13,   '',   '')
@@ -126,6 +126,7 @@ call s:HL('Operator',                 s:nord9,    '',   '')
 call s:HL('PreProc',                  s:nord10,   '',   '')
 call s:HL('Special',                  s:nord7,    '',   '')
 call s:HL('Statement',                s:nord9,    '',   '')
+call s:HL('StorageClass',             s:nord14,   '',   '')
 call s:HL('String',                   s:nord14,   '',   '')
 call s:HL('Structure',                s:nord7,    '',   '')
 call s:HL('Todo',                     s:nord15,   '',   'bold')
@@ -173,7 +174,7 @@ call s:HL('javaScriptReserved',       s:nord7,    '',   '')
 call s:HL('javaScriptRequire',        s:nord7,    '',   '')
 call s:HL('javaScriptNull',           s:nord7,    '',   '')
 
-" ===  NERDTREE  =========
+" ===  NERDTree  =========
 call s:HL('NERDTreeCWD',              s:nord7,    '',   '')
 call s:HL('NERDTreeExecFile',         s:nord7,    '',   '')
 call s:HL('NERDTreeLinkDir',          s:nord7,    '',   '')
