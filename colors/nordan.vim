@@ -46,10 +46,10 @@ let s:nord15 = '#B48EAD'
 function! s:HL(group, fg, bg, attr)
   let l:attr = a:attr
   if g:nordan_italics == 0 && l:attr ==? 'italic'
-    let l:attr = 'none' 
+    let l:attr = 'none'
   endif
 
-  if !empty(a:fg) 
+  if !empty(a:fg)
     exec 'hi ' . a:group . ' guifg=' . a:fg[0] . ' ctermfg=' . a:fg[1]
   endif
 
@@ -66,6 +66,23 @@ endfun
 " ===  Editor  =========
 
 " ===  Syntax  =========
+call s:HL('Character',    s:nord13,   '',   '')
+call s:HL('Comment',      s:nord3,    '',   'italic')
+call s:HL('Constant',     s:nord7,    '',   '')
+call s:HL('Define',       s:nord10,   '',   '')
+call s:HL('Error',        s:nord11,   '',   'bold')
+call s:HL('Function',     s:nord8,    '',   '')
+call s:HL('Identifier',   s:nord4,    '',   '')
+call s:HL('Macro',        s:nord10,   '',   '')
+call s:HL('Operator',     s:nord9,    '',   '')
+call s:HL('PreProc',      s:nord10,   '',   '')
+call s:HL('Special',      s:nord7,    '',   '')
+call s:HL('Statement',    s:nord9,    '',   '')
+call s:HL('String',       s:nord14,   '',   '')
+call s:HL('Structure',    s:nord7,    '',   '')
+call s:HL('Todo',         s:nord15,   '',   'bold')
+call s:HL('Type',         s:nord7,    '',   '')
+call s:HL('Underlined',   s:nord7,    '',   'none')
 
 " ===  CSS   =========
 
@@ -74,6 +91,4 @@ endfun
 " ===  Javascript  =========
 
 " ===  NERDTREE  =========
-
-
 
