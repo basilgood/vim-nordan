@@ -18,7 +18,6 @@
 " Based off the Nord palette from arcticicestudio
 " https://github.com/arcticicestudio/nord
 "
-
 highlight clear
 syntax reset
 
@@ -76,7 +75,7 @@ endfun
 call s:HL('ColumnColor',              '',         s:nord6,   '')
 call s:HL('Cursor',                   s:nord2,    s:nord8,   '')
 call s:HL('CursorColumn',             '',         s:nord4,   '')
-call s:HL('CursorLine',               '',         s:nord4,   'none')
+call s:HL('CursorLine',               '',         s:nord2,   'none')
 call s:HL('Directory',                s:nord9,    '',        '')
 call s:HL('DiffAdd',                  s:nord5,    s:nord14,  'none')
 call s:HL('DiffChange',               s:nord5,    s:nord13,  'none')
@@ -175,9 +174,10 @@ call s:HL('javaScriptRequire',        s:nord7,    '',   '')
 call s:HL('javaScriptNull',           s:nord7,    '',   '')
 
 " ===  NERDTree  =========
-call s:HL('NERDTreeCWD',              s:nord7,    '',   '')
+call s:HL('NERDTreeCWD',              s:nord15,    '',   '')
 call s:HL('NERDTreeExecFile',         s:nord7,    '',   '')
 call s:HL('NERDTreeLinkDir',          s:nord7,    '',   '')
 call s:HL('NERDTreeLinkFile',         s:nord7,    '',   '')
 call s:HL('NERDTreeLinkTarget',       s:nord7,    '',   '')
+call s:HL('NERDTreeDir',              s:nord9,    '',   '')
 
