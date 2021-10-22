@@ -35,7 +35,7 @@ let s:nord2 = ['#434C5E', 236]
 let s:nord3 = ['#4C566A', 237]
 
 " ===  Snow Storm  =========
-let s:nord4 = ['#D8DEE9', 251]
+let s:nord4 = ['#C9CED8', 251]
 let s:nord5 = ['#E5E9F0', 253]
 let s:nord6 = ['#ECEFF4', 254]
 
@@ -66,7 +66,7 @@ function! s:HL(group, fg, bg, attr)
     exec 'hi ' . a:group . ' guibg=' . a:bg[0] . ' ctermbg=' . a:bg[1]
   endif
 
-  if l:attr != ''
+  if l:attr !=? ''
     exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
   endif
 endfun
@@ -77,10 +77,11 @@ call s:HL('Cursor',                   s:nord2,    s:nord8,   '')
 call s:HL('CursorColumn',             '',         s:nord2,   '')
 call s:HL('CursorLine',               '',         s:nord2,   'none')
 call s:HL('Directory',                s:nord9,    '',        '')
-call s:HL('DiffAdd',                  s:nord5,    s:nord14,  'none')
-call s:HL('DiffChange',               s:nord5,    s:nord13,  'none')
-call s:HL('DiffDelete',               s:nord5,    s:nord11,  'none')
+call s:HL('DiffAdd',                  s:nord14,   s:nord2,   'none')
+call s:HL('DiffChange',               s:nord13,   s:nord2,   'none')
+call s:HL('DiffDelete',               s:nord11,   s:nord2,   'none')
 call s:HL('DiffText',                 s:nord5,    s:nord10,  'none')
+call s:HL('EndOfBuffer',              s:nord3,    '',        'none')
 call s:HL('ErrorMsg',                 s:nord11,   s:nord4,   'bold')
 call s:HL('VertSplit',                s:nord3,    s:nord0,   'none')
 call s:HL('Folded',                   s:nord4,    s:nord2,   '')
@@ -88,7 +89,7 @@ call s:HL('FoldColumn',               s:nord8,    s:nord2,   '')
 call s:HL('SignColumn',               s:nord4,    s:nord2,   '')
 call s:HL('LineNr',                   s:nord2,    '',        '')
 call s:HL('CursorLineNr',             s:nord4,    s:nord3,   'none')
-call s:HL('MatchParen',               s:nord3,    s:nord7,   'bold')
+call s:HL('MatchParen',               s:nord4,    s:nord1,   'none')
 call s:HL('ModeMsg',                  s:nord10,   '',        '')
 call s:HL('MoreMsg',                  s:nord10,   '',        '')
 call s:HL('NonText',                  s:nord5,    '',        '')
@@ -98,17 +99,18 @@ call s:HL('PmenuSel',                 s:nord3,    s:nord9,   '')
 call s:HL('PmenuSbar',                s:nord4,    s:nord1,   '')
 call s:HL('PmenuThumb',               s:nord2,    s:nord3,   '')
 call s:HL('Question',                 s:nord7,    '',        '')
-call s:HL('Search',                   s:nord2,    s:nord13,  '')
+call s:HL('Search',                   '',         s:nord1,   'underline')
+call s:HL('IncSearch',                s:nord2,    s:nord9,   '')
 call s:HL('SpecialKey',               s:nord3,    '',        '')
 call s:HL('SpellCap',                 s:nord10,   '',        'undercurl')
 call s:HL('SpellBad',                 s:nord11,   '',        'undercurl')
-call s:HL('StatusLine',               s:nord5,    s:nord3,   'none')
-call s:HL('StatusLineNC',             s:nord2,    s:nord4,   '')
+call s:HL('StatusLine',               s:nord4,    s:nord3,   'none')
+call s:HL('StatusLineNC',             s:nord2,    s:nord9,   '')
 call s:HL('TabLine',                  s:nord0,    s:nord3,   'none')
 call s:HL('TabLineFill',              s:nord3,    s:nord0,   'none')
-call s:HL('TabLineSel',               s:nord15,    s:nord0,   '')
+call s:HL('TabLineSel',               s:nord15,    s:nord0,  '')
 call s:HL('Title',                    s:nord13,   '',        'none')
-call s:HL('Visual',                   s:nord4,    s:nord9,   '')
+call s:HL('Visual',                   s:nord4,    s:nord2,   '')
 call s:HL('WarningMsg',               s:nord11,   '',        '')
 call s:HL('WildMenu',                 s:nord2,    s:nord10,  '')
 
@@ -169,17 +171,6 @@ call s:HL('sassIdChar',               s:nord9,    '',        '')
 call s:HL('sassInclude',              s:nord9,    '',        '')
 call s:HL('sassProperty',             s:nord7,    '',        '')
 
-" ===  Less  =========
-call s:HL('lessAmpersand',            s:nord9,    '',        '')
-call s:HL('lessClass',                s:nord7,    '',        '')
-call s:HL('lessClassChar',            s:nord6,    '',        '')
-call s:HL('lessCssAttribute',         s:nord9,    '',        '')
-call s:HL('lessId',                   s:nord9,    '',        '')
-call s:HL('lessIdChar',               s:nord9,    '',        '')
-call s:HL('lessInclude',              s:nord9,    '',        '')
-call s:HL('lessProperty',             s:nord7,    '',        '')
-call s:HL('lessVariable',             s:nord9,    '',        '')
-
 " ===  HTML  =========
 call s:HL('htmlArg',                  s:nord7,    '',        '')
 call s:HL('htmlEndTag',               s:nord9,    '',        '')
@@ -188,24 +179,6 @@ call s:HL('htmlTagN',                 s:nord9,    '',        '')
 call s:HL('htmlTagName',              s:nord9,    '',        '')
 call s:HL('htmlTitle',                s:nord7,    '',        '')
 
-" ===  Javascript  =========
-call s:HL('javaScriptBraces',         s:nord7,    '',        '')
-call s:HL('javaScriptIdentifier',     s:nord7,    '',        '')
-call s:HL('javaScriptFunction',       s:nord7,    '',        '')
-call s:HL('javaScriptNumber',         s:nord7,    '',        '')
-call s:HL('javaScriptReserved',       s:nord7,    '',        '')
-call s:HL('javaScriptRequire',        s:nord7,    '',        '')
-call s:HL('javaScriptNull',           s:nord7,    '',        '')
-
-" ===  vim-javascript  =========
-call s:HL('jsFuncCall',               s:nord8,    '',        '')
-call s:HL('jsNoise',                  s:nord9,    '',        '')
-call s:HL('jsGlobalNodeObjects',      s:nord8,    '',        '')
-call s:HL('jsParen',                  s:nord7,    '',        '')
-call s:HL('jsThis',                   s:nord9,    '',        '')
-call s:HL('jsArrowFunction',          s:nord9,    '',        '')
-
-" ===  NERDTree  =========
-call s:HL('NERDTreeCWD',              s:nord15,   '',        '')
-call s:HL('NERDTreeDir',              s:nord9,    '',        '')
-
+" ===  ALE  =========
+call s:HL('ALEErrorSign',             s:nord11,    '',       '')
+call s:HL('ALEWarningSign',           s:nord13,    '',       '')
