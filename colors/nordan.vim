@@ -182,3 +182,11 @@ call s:HL('htmlTitle',                s:nord7,    '',        '')
 " ===  ALE  =========
 call s:HL('ALEErrorSign',             s:nord11,    '',       '')
 call s:HL('ALEWarningSign',           s:nord13,    '',       '')
+
+" ===  Terminal  =========
+let g:terminal_ansi_colors = [
+      \ '#4E4E4E', '#AF5F5F', '#5F885F', '#AF8760',
+      \ '#5F87AE', '#875F87', '#5F8787', '#808080',
+      \ '#3A3A3A', '#870100', '#005F00', '#D8865F',
+      \ '#0087AF', '#87025F', '#008787', '#8A8A8A'
+      \ ]
