@@ -129,10 +129,10 @@ call s:HL('Special',                  s:nord8,   '',        '')
 call s:HL('Statement',                s:nord9,    '',        '')
 call s:HL('StorageClass',             s:nord9,    '',        '')
 call s:HL('String',                   s:nord7,   '',        '')
-call s:HL('Structure',                s:nord7,    '',        '')
+call s:HL('Structure',                s:nord9,    '',        '')
 call s:HL('Todo',                     s:nord15,   '',        'bold')
 call s:HL('Type',                     s:nord9,    '',        '')
-call s:HL('Underlined',               s:nord7,    '',        'none')
+call s:HL('Underlined',               s:nord9,    '',        'none')
 
 " ===  CSS  =========
 call s:HL('cssAnimationAttr',         s:nord9,    '',        '')
