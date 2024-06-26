@@ -59,18 +59,22 @@ let s:nord20 = ['#a56579', 2]
 let s:nord21 = ['#ab965f', 2]
 
 function! s:HL(group, fg, bg, attr)
-  let l:attr = a:attr
-
   if !empty(a:fg)
     exec 'hi ' . a:group . ' guifg=' . a:fg[0] . ' ctermfg=' . a:fg[1]
+  else
+    exec 'highlight! ' . a:group . ' guifg=NONE'
   endif
 
   if !empty(a:bg)
     exec 'hi ' . a:group . ' guibg=' . a:bg[0] . ' ctermbg=' . a:bg[1]
+  else
+    exec 'highlight! ' . a:group . ' guibg=NONE'
   endif
 
-  if l:attr != ''
-    exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
+  if !empty(a:attr)
+    exec 'hi ' . a:group . ' gui=' . a:attr . ' cterm=' . a:attr
+  else
+    exec 'hi ' . a:group . ' gui=NONE' . ' cterm=NONE'
   endif
 endfun
 
