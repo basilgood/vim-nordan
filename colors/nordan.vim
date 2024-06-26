@@ -111,7 +111,7 @@ call s:HL('TabLine',                  s:nord0,    s:nord3,   'none')
 call s:HL('TabLineFill',              s:nord3,    s:nord0,   'none')
 call s:HL('TabLineSel',               s:nord15,    s:nord0,   '')
 call s:HL('Title',                    s:nord13,   '',        'none')
-call s:HL('Visual',                   '',         s:nord9,   '')
+call s:HL('Visual',                   '',         s:nord2,   '')
 call s:HL('WarningMsg',               s:nord11,   '',        '')
 call s:HL('WildMenu',                 s:nord2,    s:nord10,  '')
 
