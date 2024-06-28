@@ -51,7 +51,7 @@ let s:nord15 = ['#B48EAD', 133]
 " ===  Diff  ========
 let s:nord16 = ['#262A32', 0]
 let s:nord17 = ['#6a373f', 1]
-let s:nord18 = ['#4f6886', 4]
+let s:nord18 = ['#214d68', 4]
 
 " ===  GitGutter  ========
 let s:nord19 = ['#6d9d78', 2]
